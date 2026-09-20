@@ -1,0 +1,388 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Event Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            College Events
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#register">Register</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>College Event Management System</h1>
+
+            <p>
+                Discover, participate and register for exciting
+                college events in one place.
+            </p>
+
+            <a href="#events" class="main-button">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+
+        <h2>Upcoming Events</h2>
+
+        <p class="section-description">
+            Explore our upcoming college events and register
+            for your favourite event.
+        </p>
+
+
+        <div class="event-container">
+
+            <!-- Event 1 -->
+            <div class="event-card">
+
+                <div class="event-icon">
+                    💻
+                </div>
+
+                <h3>Tech Fest 2026</h3>
+
+                <p>
+                    Participate in coding competitions,
+                    technical quizzes and project exhibitions.
+                </p>
+
+                <p>
+                    <strong>Date:</strong> October 10, 2026
+                </p>
+
+                <p>
+                    <strong>Venue:</strong> Seminar Hall
+                </p>
+
+                <button onclick="selectEvent('Tech Fest 2026')">
+                    Register
+                </button>
+
+            </div>
+
+
+            <!-- Event 2 -->
+            <div class="event-card">
+
+                <div class="event-icon">
+                    🎭
+                </div>
+
+                <h3>Cultural Fest</h3>
+
+                <p>
+                    Enjoy music, dance, drama and various
+                    cultural performances.
+                </p>
+
+                <p>
+                    <strong>Date:</strong> October 15, 2026
+                </p>
+
+                <p>
+                    <strong>Venue:</strong> College Auditorium
+                </p>
+
+                <button onclick="selectEvent('Cultural Fest')">
+                    Register
+                </button>
+
+            </div>
+
+
+            <!-- Event 3 -->
+            <div class="event-card">
+
+                <div class="event-icon">
+                    🏆
+                </div>
+
+                <h3>Sports Meet</h3>
+
+                <p>
+                    Participate in indoor and outdoor sports
+                    competitions and represent your department.
+                </p>
+
+                <p>
+                    <strong>Date:</strong> October 20, 2026
+                </p>
+
+                <p>
+                    <strong>Venue:</strong> College Ground
+                </p>
+
+                <button onclick="selectEvent('Sports Meet')">
+                    Register
+                </button>
+
+            </div>
+
+
+            <!-- Event 4 -->
+            <div class="event-card">
+
+                <div class="event-icon">
+                    🧠
+                </div>
+
+                <h3>Quiz Competition</h3>
+
+                <p>
+                    Test your knowledge and compete with
+                    students from different departments.
+                </p>
+
+                <p>
+                    <strong>Date:</strong> October 25, 2026
+                </p>
+
+                <p>
+                    <strong>Venue:</strong> Room 101
+                </p>
+
+                <button onclick="selectEvent('Quiz Competition')">
+                    Register
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registration Section -->
+    <section id="register" class="registration-section">
+
+        <h2>Event Registration</h2>
+
+        <p class="section-description">
+            Fill in your details to register for an event.
+        </p>
+
+
+        <div class="form-container">
+
+            <form id="registrationForm">
+
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="collegeId">
+                    College ID
+                </label>
+
+                <input
+                    type="text"
+                    id="collegeId"
+                    placeholder="Enter your college ID"
+                    required
+                >
+
+
+                <label for="department">
+                    Department
+                </label>
+
+                <select id="department" required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="CSE">
+                        Computer Science and Engineering
+                    </option>
+
+                    <option value="Cyber Security">
+                        Cyber Security
+                    </option>
+
+                    <option value="ECE">
+                        Electronics and Communication Engineering
+                    </option>
+
+                    <option value="EEE">
+                        Electrical and Electronics Engineering
+                    </option>
+
+                    <option value="Mechanical">
+                        Mechanical Engineering
+                    </option>
+
+                    <option value="Civil">
+                        Civil Engineering
+                    </option>
+
+                </select>
+
+
+                <label for="event">
+                    Select Event
+                </label>
+
+                <select id="event" required>
+
+                    <option value="">
+                        Select Event
+                    </option>
+
+                    <option value="Tech Fest 2026">
+                        Tech Fest 2026
+                    </option>
+
+                    <option value="Cultural Fest">
+                        Cultural Fest
+                    </option>
+
+                    <option value="Sports Meet">
+                        Sports Meet
+                    </option>
+
+                    <option value="Quiz Competition">
+                        Quiz Competition
+                    </option>
+
+                </select>
+
+
+                <button type="submit" class="submit-button">
+                    Submit Registration
+                </button>
+
+            </form>
+
+
+            <!-- Success Message -->
+
+            <div id="successMessage" class="success-message">
+
+                <h3>Registration Successful! 🎉</h3>
+
+                <p>
+                    Thank you for registering for the event.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <h2>About the Project</h2>
+
+        <p>
+            The College Event Management System is a
+            frontend-based web application developed using
+            HTML, CSS and JavaScript.
+        </p>
+
+        <p>
+            The system helps students view upcoming college
+            events and register for events through an easy
+            and user-friendly interface.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            📧 Email: collegeevents@example.com
+        </p>
+
+        <p>
+            📞 Phone: +91 XXXXX XXXXX
+        </p>
+
+        <p>
+            📍 College Campus
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 College Event Management System
+        </p>
+
+        <p>
+            Developed using HTML, CSS and JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
